@@ -1,6 +1,7 @@
 package at.xer0.EasyFireworks.Commands;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.Dispenser;
 import org.bukkit.entity.Player;
@@ -14,13 +15,14 @@ public class Command_fillup {
 	
 	public static void fire(Player p)
 	{
+		@SuppressWarnings("deprecation")
 		Block disp = p.getTargetBlock(null, 20);
-		if(disp.getTypeId() == 0)
+		if(disp.getType() == Material.AIR)
 		{
 			p.sendMessage(ChatColor.RED +"This Block is too far away!");
 		}else
 		{
-			if(disp.getTypeId() == 23)
+			if(disp.getType() == Material.DISPENSER)
 			{
 		    Dispenser dispenser = (Dispenser) disp.getState();
 	        Inventory inv = dispenser.getInventory();
