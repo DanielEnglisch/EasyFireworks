@@ -1,6 +1,4 @@
-EasyFireworks
-=============
+# Easy Fireworks
 
-Bukkit Plugin
-
-A Plugin I wrote for the Bukkit Server System (Minecraft Server).
+## Download
+Please visit the official project page [here](http://xeroserver.org/easyfireworks.php).
